@@ -50,7 +50,6 @@ fun OtpScreen(
     val state by authViewModel.authState.collectAsState()
 
     LaunchedEffect(Unit) {
-        // Countdown timer
         while (timeLeft > 0) {
             delay(1000)
             timeLeft--
@@ -79,9 +78,6 @@ fun OtpScreen(
             modifier = Modifier.fillMaxWidth(),
             singleLine = true
         )
-
-        Spacer(modifier = Modifier.height(8.dp))
-        Text("Verification ID: ${verificationId ?: "null"}", color = Color.Gray)
 
         Spacer(modifier = Modifier.height(16.dp))
 
